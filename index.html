@@ -3,43 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Locação de Carro</title>
+    <title>Cadastro de Cliente e Carro</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
     </style>
 </head>
 <body>
 
-<h1>Formulário de Locação de Carro</h1>
-<form id="carRentalForm">
-    <label for="nome">Nome:</label><br>
-    <input type="text" id="nome" required><br><br>
+<h1>Cadastro de Cliente e Carro</h1>
+<form id="formCadastro">
+    <!-- Informações do Cliente -->
+    <h2>Informações do Cliente</h2>
+    <label for="nomeCliente">Nome do Cliente:</label><br>
+    <input type="text" id="nomeCliente" required><br><br>
 
-    <label for="nascimento">Data de Nascimento (DDMMAAAA):</label><br>
-    <input type="text" id="nascimento" required><br><br>
+    <label for="telefoneCliente">Telefone:</label><br>
+    <input type="text" id="telefoneCliente" required><br><br>
 
-    <label for="contato">Número de Telefone ou Email:</label><br>
-    <input type="text" id="contato" required><br><br>
+    <label for="cpfCliente">CPF:</label><br>
+    <input type="text" id="cpfCliente" required><br><br>
 
-    <label for="modelo">Modelo de Carro Desejado:</label><br>
-    <input type="text" id="modelo" required><br><br>
+    <label for="emailCliente">Email:</label><br>
+    <input type="email" id="emailCliente" required><br><br>
 
-    <label for="endereco">Endereço de Residência:</label><br>
-    <input type="text" id="endereco" required><br><br>
+    <label for="enderecoCliente">Endereço:</label><br>
+    <input type="text" id="enderecoCliente" required><br><br>
 
-    <label for="novo">Carro Novo de Fábrica? ('Sim' ou 'Não'):</label><br>
-    <input type="text" id="novo" required><br><br>
+    <!-- Informações do Carro -->
+    <h2>Informações do Carro</h2>
+    <label for="modeloCarro">Modelo do Carro:</label><br>
+    <input type="text" id="modeloCarro" required><br><br>
 
-    <label for="dataLocamento">Data de Locação (DDMMAAAA):</label><br>
-    <input type="text" id="dataLocamento" required><br><br>
+    <label for="corCarro">Cor do Carro:</label><br>
+    <input type="text" id="corCarro" required><br><br>
+
+    <label for="novoCarro">Novo de Fábrica (Sim/Não):</label><br>
+    <input type="text" id="novoCarro" required><br><br>
+
+    <!-- Informações do Funcionário -->
+    <h2>Informações do Funcionário</h2>
+    <label for="nomeFuncionario">Nome do Funcionário:</label><br>
+    <input type="text" id="nomeFuncionario" required><br><br>
+
+    <label for="funcaoFuncionario">Função na Empresa:</label><br>
+    <input type="text" id="funcaoFuncionario" required><br><br>
 
     <button type="submit">Enviar</button>
 </form>
 
-<script src="excel.js"></script>
+<p id="mensagem"></p>
+
+<table id="tabelaCadastro">
+    <thead>
+        <tr>
+            <th>Nome do Cliente</th>
+            <th>Telefone</th>
+            <th>CPF</th>
+            <th>Email</th>
+            <th>Endereço</th>
+            <th>Modelo do Carro</th>
+            <th>Cor do Carro</th>
+            <th>Novo de Fábrica</th>
+            <th>Nome do Funcionário</th>
+            <th>Função na Empresa</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+<!-- Script externo com defer -->
+<script src="excel.js" defer></script>
 
 </body>
 </html>
