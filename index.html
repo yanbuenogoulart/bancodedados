@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Locação de Carro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Formulário de Locação de Carro</h1>
+<form id="carRentalForm">
+    <label for="nome">Nome:</label><br>
+    <input type="text" id="nome" required><br><br>
+
+    <label for="nascimento">Data de Nascimento (DDMMAAAA):</label><br>
+    <input type="text" id="nascimento" required><br><br>
+
+    <label for="contato">Número de Telefone ou Email:</label><br>
+    <input type="text" id="contato" required><br><br>
+
+    <label for="modelo">Modelo de Carro Desejado:</label><br>
+    <input type="text" id="modelo" required><br><br>
+
+    <label for="endereco">Endereço de Residência:</label><br>
+    <input type="text" id="endereco" required><br><br>
+
+    <label for="novo">Carro Novo de Fábrica? ('Sim' ou 'Não'):</label><br>
+    <input type="text" id="novo" required><br><br>
+
+    <label for="dataLocamento">Data de Locação (DDMMAAAA):</label><br>
+    <input type="text" id="dataLocamento" required><br><br>
+
+    <button type="submit">Enviar</button>
+</form>
+
+<script src="excel.js"></script>
+
+</body>
+</html>
